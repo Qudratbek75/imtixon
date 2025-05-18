@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "0761a06d-2e71-4715-8772-b6ec7266ed25",
+		"name": "users_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40604633"
+	},
+	"item": [
+		{
+			"name": "user register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Husanboy\",\r\n    \"email\":\"example@gmail.com\",\r\n    \"password\":\"husan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login qilish",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"example@gmail.com\",\r\n    \"password\":\"husan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profil malumotlari",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/user/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"user",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "parolni o'zgartirish",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"new_password\":\"parolsiz\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/user/update-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"user",
+						"update-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "barcha kategoriyalarni olish",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/category/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"category",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "kategoriya qidirish",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/category/search?slug=act",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"category",
+						"search"
+					],
+					"query": [
+						{
+							"key": "slug",
+							"value": "act"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Barcha filmlarni olish",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Interstellar\",\r\n    \"slug\":\"interstellar\",\r\n    \"description\":\"Ajoyib sarguazasht film\",\r\n    \"release_year\":2014,\r\n    \"duration_minutes\":186,\r\n    \"categories\":[1]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/movie/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"movie",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eng mashxur filmalrni olish",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Interstellar\",\r\n    \"slug\":\"interstellar\",\r\n    \"description\":\"Ajoyib sarguazasht film\",\r\n    \"release_year\":2014,\r\n    \"duration_minutes\":186,\r\n    \"categories\":[1]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/movie/top",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"movie",
+						"top"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "film qidirish",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Interstellar\",\r\n    \"slug\":\"interstellar\",\r\n    \"description\":\"Ajoyib sarguazasht film\",\r\n    \"release_year\":2014,\r\n    \"duration_minutes\":186,\r\n    \"categories\":[1]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/movie/search?title=merlin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"movie",
+						"search"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "merlin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obuna bolish va tolov qilish",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"plan_id\":1\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/user-subscription/subscription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"user-subscription",
+						"subscription"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
